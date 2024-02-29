@@ -1,39 +1,38 @@
-import { useState } from "react";
+type NavBarProps = {
+  menuSelected: { text: string; selected: boolean }[];
+  setMenuSelected: React.Dispatch<
+    React.SetStateAction<{ text: string; selected: boolean }[]>
+  >;
+};
 
-function NavBar() {
-  let [listValues, setListValues] = useState<
-    { text: string; selected: boolean }[]
-  >([
-    { text: "Home", selected: true },
-    { text: "About", selected: false },
-    { text: "Work", selected: false },
-    { text: "Project", selected: false },
-  ]);
+function NavBar(props: NavBarProps) {
+  let { menuSelected, setMenuSelected } = props;
 
-  function handleClick(indexSelected: number) {
-    setListValues((prevListValues) =>
+  function onMenuItemClick(indexClicked: number) {
+    setMenuSelected((prevListValues) =>
       prevListValues.map((item, index) => ({
         ...item,
-        selected: index === indexSelected,
+        selected: index === indexClicked,
       }))
     );
   }
 
   return (
-    <nav className="fixed right-0 h-full flex justify-center flex-col mr-5">
-      <ul className="h-40 flex justify-between flex-col text-right">
-        {listValues.map((listValue, i) => {
+    <nav className="h-full w-40 flex justify-end items-center">
+      <ul className="h-56 w-full flex justify-between flex-col">
+        {menuSelected.map((menuItem, i) => {
           return (
-            <a>
-              <li
-                className={"hover:font-bold cursor-pointer transition-all ".concat(
-                  listValue.selected ? "font-bold mr-5" : ""
-                )}
-                onClick={() => handleClick(i)}
-              >
-                {listValue.text}
-              </li>
-            </a>
+            <li
+              key={i}
+              className={"cursor-pointer text-right text-2xl transition-all ".concat(
+                menuItem.selected ? "font-bold mr-10" : "mr-5"
+              )}
+              onClick={() => {
+                onMenuItemClick(i);
+              }}
+            >
+              {menuItem.text}
+            </li>
           );
         })}
       </ul>
