@@ -34,24 +34,24 @@ function HomePage(props: HomePageProps) {
           onClick={() => {
             setBounceOn(!bounceOn);
           }}
-          className=" text-rose-600 cursor-pointer hover:text-rose-700"
+          className="cursor-pointer text-rose-600 hover:text-rose-700"
         >
           Waled
         </span>
       </h1>
       <h2 className="text-5xl font-bold text-slate-800 w-[700px] mb-10">
         I like to{" "}
-        <span className=" text-rose-600 cursor-pointer hover:text-rose-700">
+        <span className="cursor-pointer text-rose-600 hover:text-rose-700">
           build websites
         </span>{" "}
         then{" "}
-        <span className=" text-rose-600 hover:text-rose-700 cursor-pointer">
+        <span className="cursor-pointer text-rose-600 hover:text-rose-700">
           destroy them
         </span>
       </h2>
       <button
         onClick={onContactMeClick}
-        className="bg-rose-600 text-xl py-2 px-4 font-bold text-white rounded-lg hover:bg-rose-800 cursor-pointer transition-transform duration-500 hover:-rotate-3"
+        className="px-4 py-2 text-xl font-bold text-white transition-transform duration-500 rounded-lg cursor-pointer bg-rose-600 hover:bg-rose-800 hover:-rotate-3"
       >
         Contact Me
       </button>

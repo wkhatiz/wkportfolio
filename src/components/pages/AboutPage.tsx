@@ -22,7 +22,7 @@ function AboutPage(props: AboutPageProps) {
       <h2 className="text-5xl font-bold text-slate-800 w-[700px] mb-5">
         About Me
       </h2>
-      <p className=" w-3/4">
+      <p className="w-3/4 ">
         I'm a passionate Software Engineer currently working in QA with over 2
         years of experience in the industry and strong background in web
         development. Through my academic and professional experience, I've been
@@ -48,7 +48,7 @@ function AboutPage(props: AboutPageProps) {
         to help build the next era of web technologies. If you're looking for a
         dedicated and versatile software developer, I'd love to{" "}
         <span
-          className="font-bold text-rose-600 cursor-pointer"
+          className="font-bold cursor-pointer text-rose-600"
           onClick={() => {
             setContactMeVisible(true);
           }}

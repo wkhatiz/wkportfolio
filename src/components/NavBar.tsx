@@ -18,8 +18,8 @@ function NavBar(props: NavBarProps) {
   }
 
   return (
-    <nav className="h-full w-40 flex justify-end items-center">
-      <ul className="h-56 w-full flex justify-between flex-col">
+    <nav className="flex items-center justify-end w-40 h-full">
+      <ul className="flex flex-col justify-between w-full h-56">
         {menuSelected.map((menuItem, i) => {
           return (
             <li

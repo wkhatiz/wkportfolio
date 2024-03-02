@@ -12,11 +12,11 @@ function WorkPage() {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <img src="Infosys_logo.svg.png" className=" h-14 mb-3"></img>
+      <img src="Infosys_logo.svg.png" className="mb-3 h-14"></img>
       <h2 className="text-4xl font-bold text-slate-800 w-[700px] mb-2">
         Infosys Limited Australia
       </h2>
-      <p className="mb-8 text-slate-800 w-3/4">
+      <p className="w-3/4 mb-8 text-slate-800">
         Lead Tester and QA Engineer on the Infosys SIT team, responsible for
         both functional and non-functional testing and test automation for
         Infosys clients. 2 years of experience using tools such as Selenium,
@@ -32,11 +32,11 @@ function WorkPage() {
         macros and powershell scripts which improved the tester experience,
         reduced test preparation efforts and test execution times
       </p>
-      <img src="IBM_logo.svg.png" className=" h-12 mb-5"></img>
+      <img src="IBM_logo.svg.png" className="h-12 mb-5 "></img>
       <h2 className="text-4xl font-bold text-slate-800 w-[700px] mb-2">
         IBM Chicago
       </h2>
-      <p className="text-slate-800 w-3/4">
+      <p className="w-3/4 text-slate-800">
         A volunteer project as part of my academics at Western Sydney University
         which involved contributing to the IBM Watson Astronomy Assistant app.
         The app was built in React Native and would provide a IM like interface

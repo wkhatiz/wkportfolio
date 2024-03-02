@@ -27,7 +27,7 @@ function ContactMe(props: ContactMeProps) {
         <h2 className="text-2xl font-bold text-slate-800">
           Shoot Me A Message
         </h2>
-        <span className="opacity-50 hover:opacity-100 transition-opacity duration-300">
+        <span className="transition-opacity duration-300 opacity-50 hover:opacity-100">
           or visit my{" "}
           <a
             className="text-blue-500 underline hover:text-blue-700"
@@ -44,19 +44,19 @@ function ContactMe(props: ContactMeProps) {
           </a>
         </span>
 
-        <div className="w-full flex justify-between mb-2 mt-5">
+        <div className="flex justify-between w-full mt-5 mb-2">
           <input
             id="contactme-name"
             placeholder="Your Name"
             type="text"
-            className="border-2 rounded-md py-2 px-3 flex-1 mr-1"
+            className="flex-1 px-3 py-2 mr-1 border-2 rounded-md"
           ></input>
           <input
             id="contactme-email"
             placeholder="Your Email"
             type="email"
             name="_replyto"
-            className="border-2 rounded-md py-2 px-3 flex-1 ml-1"
+            className="flex-1 px-3 py-2 ml-1 border-2 rounded-md"
           ></input>
         </div>
         <input
@@ -64,24 +64,24 @@ function ContactMe(props: ContactMeProps) {
           placeholder="Subject"
           type="text"
           name="_subject"
-          className="border-2 rounded-md py-2 px-3 w-full mb-2"
+          className="w-full px-3 py-2 mb-2 border-2 rounded-md"
         ></input>
         <textarea
           id="contactme-body"
           placeholder="Insert your message here"
           name="message"
-          className="border-2 rounded-md py-2 px-3 w-full h-32 mb-4 resize-none overflow-scroll"
+          className="w-full h-32 px-3 py-2 mb-4 overflow-scroll border-2 rounded-md resize-none"
         ></textarea>
         <input type="text" name="_gotcha" style={{ display: "none" }} />
         <div>
           <input
             type="submit"
             value="Submit"
-            className="bg-rose-600 text-lg py-2 px-8 font-bold text-white rounded-lg hover:bg-rose-800 cursor-pointer mr-2"
+            className="px-8 py-2 mr-2 text-lg font-bold text-white rounded-lg cursor-pointer bg-rose-600 hover:bg-rose-800"
           ></input>
           <button
             onClick={onClickClose}
-            className="bg-gray-500 text-lg py-2 px-8 font-bold text-white rounded-lg hover:bg-gray-700 cursor-pointer"
+            className="px-8 py-2 text-lg font-bold text-white bg-gray-500 rounded-lg cursor-pointer hover:bg-gray-700"
           >
             Cancel
           </button>
