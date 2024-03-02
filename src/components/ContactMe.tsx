@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 type ContactMeProps = {
   contactMeVisible: boolean;
   setContactMeVisible: React.Dispatch<React.SetStateAction<boolean>>;
