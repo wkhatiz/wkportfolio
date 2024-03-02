@@ -6,26 +6,26 @@ type NavBarProps = {
 };
 
 function NavBar(props: NavBarProps) {
-  let { menuSelected, setMenuSelected } = props;
+  const { menuSelected, setMenuSelected } = props;
 
   function onMenuItemClick(indexClicked: number) {
     setMenuSelected((prevListValues) =>
       prevListValues.map((item, index) => ({
         ...item,
         selected: index === indexClicked,
-      }))
+      })),
     );
   }
 
   return (
-    <nav className="flex items-center justify-end w-40 h-full">
-      <ul className="flex flex-col justify-between w-full h-56">
+    <nav className="flex h-full w-40 items-center justify-end">
+      <ul className="flex h-56 w-full flex-col justify-between">
         {menuSelected.map((menuItem, i) => {
           return (
             <li
               key={i}
               className={"cursor-pointer text-right text-2xl transition-all ".concat(
-                menuItem.selected ? "font-bold mr-10" : "mr-5"
+                menuItem.selected ? "mr-10 font-bold" : "mr-5",
               )}
               onClick={() => {
                 onMenuItemClick(i);

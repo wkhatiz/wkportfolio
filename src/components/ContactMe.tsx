@@ -1,3 +1,5 @@
+import { MouseEvent } from "react";
+
 type ContactMeProps = {
   contactMeVisible: boolean;
   setContactMeVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -6,14 +8,14 @@ type ContactMeProps = {
 function ContactMe(props: ContactMeProps) {
   const { contactMeVisible, setContactMeVisible } = props;
 
-  function onClickClose(e: any) {
+  function onClickClose(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     setContactMeVisible(false);
   }
 
   return (
     <div
-      className={`w-[800px] bg-white rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 z-10 ${
+      className={`absolute left-1/2 top-1/2 z-10 w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-10 ${
         contactMeVisible
           ? "visible transition-opacity duration-300"
           : "invisible"
@@ -27,7 +29,7 @@ function ContactMe(props: ContactMeProps) {
         <h2 className="text-2xl font-bold text-slate-800">
           Shoot Me A Message
         </h2>
-        <span className="transition-opacity duration-300 opacity-50 hover:opacity-100">
+        <span className="opacity-50 transition-opacity duration-300 hover:opacity-100">
           or visit my{" "}
           <a
             className="text-blue-500 underline hover:text-blue-700"
@@ -44,19 +46,19 @@ function ContactMe(props: ContactMeProps) {
           </a>
         </span>
 
-        <div className="flex justify-between w-full mt-5 mb-2">
+        <div className="mb-2 mt-5 flex w-full justify-between">
           <input
             id="contactme-name"
             placeholder="Your Name"
             type="text"
-            className="flex-1 px-3 py-2 mr-1 border-2 rounded-md"
+            className="mr-1 flex-1 rounded-md border-2 px-3 py-2"
           ></input>
           <input
             id="contactme-email"
             placeholder="Your Email"
             type="email"
             name="_replyto"
-            className="flex-1 px-3 py-2 ml-1 border-2 rounded-md"
+            className="ml-1 flex-1 rounded-md border-2 px-3 py-2"
           ></input>
         </div>
         <input
@@ -64,24 +66,24 @@ function ContactMe(props: ContactMeProps) {
           placeholder="Subject"
           type="text"
           name="_subject"
-          className="w-full px-3 py-2 mb-2 border-2 rounded-md"
+          className="mb-2 w-full rounded-md border-2 px-3 py-2"
         ></input>
         <textarea
           id="contactme-body"
           placeholder="Insert your message here"
           name="message"
-          className="w-full h-32 px-3 py-2 mb-4 overflow-scroll border-2 rounded-md resize-none"
+          className="mb-4 h-32 w-full resize-none overflow-scroll rounded-md border-2 px-3 py-2"
         ></textarea>
         <input type="text" name="_gotcha" style={{ display: "none" }} />
         <div>
           <input
             type="submit"
             value="Submit"
-            className="px-8 py-2 mr-2 text-lg font-bold text-white rounded-lg cursor-pointer bg-rose-600 hover:bg-rose-800"
+            className="mr-2 cursor-pointer rounded-lg bg-rose-600 px-8 py-2 text-lg font-bold text-white hover:bg-rose-800"
           ></input>
           <button
             onClick={onClickClose}
-            className="px-8 py-2 text-lg font-bold text-white bg-gray-500 rounded-lg cursor-pointer hover:bg-gray-700"
+            className="cursor-pointer rounded-lg bg-gray-500 px-8 py-2 text-lg font-bold text-white hover:bg-gray-700"
           >
             Cancel
           </button>
