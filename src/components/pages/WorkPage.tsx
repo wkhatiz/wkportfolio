@@ -24,8 +24,9 @@ function WorkPage() {
         measuring the quality of software products.
         <br />
         <br /> Mentor and trainer for new testers as well as SME for existing
-        testers across teams, creating documentation for project specific skills
-        as well as global testing skills for testers to refer to.
+        testers across teams where I provide presentations and create
+        documentation for project specific skills as well as global testing
+        skills for testers to refer to.
         <br />
         <br /> Automated test case creation and test evidence creation using VBA
         macros and powershell scripts which improved the tester experience,

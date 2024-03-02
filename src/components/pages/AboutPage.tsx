@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 
-function AboutPage() {
+type AboutPageProps = {
+  setContactMeVisible: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function AboutPage(props: AboutPageProps) {
+  let { setContactMeVisible } = props;
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,11 +23,12 @@ function AboutPage() {
         About Me
       </h2>
       <p className=" w-3/4">
-        I'm a passionate software developer with a keen interest in creating
-        efficient, scalable, and innovative solutions. With [X years] of
-        experience in the industry, I've had the opportunity to work on a
-        variety of projects, ranging from web and mobile applications to machine
-        learning algorithms.
+        I'm a passionate Software Engineer currently working in QA with over 2
+        years of experience in the industry and strong background in web
+        development. Through my academic and professional experience, I've been
+        able to help build a wide variety of software solutions from web and
+        mobile applications using React and React Native, to AI opponents for
+        chess games in C++.
         <br />
         <br /> My journey into software development started with a fascination
         for technology and a drive to understand how things work behind the
@@ -35,13 +42,20 @@ function AboutPage() {
         responsive web interface or optimizing database performance, I strive
         for excellence in everything I do.
         <br />
-        <br /> Outside of coding, I enjoy [hobbies/interests], which helps me
-        stay creative and bring fresh perspectives to my work. I'm also a strong
-        advocate for [relevant cause or technology], always looking for ways to
-        contribute to the community and make a positive impact. I'm currently
+        <br /> Outside of coding, I enjoy illustration and design, which helps
+        me stay creative and bring fresh perspectives to my work. I'm currently
         seeking new opportunities where I can leverage my skills and experience
-        to [your goal or mission]. If you're looking for a dedicated and
-        versatile software developer, I'd love to connect!
+        to help build the next era of web technologies. If you're looking for a
+        dedicated and versatile software developer, I'd love to{" "}
+        <span
+          className="font-bold text-rose-600 cursor-pointer"
+          onClick={() => {
+            setContactMeVisible(true);
+          }}
+        >
+          connect
+        </span>
+        !
       </p>
     </div>
   );
