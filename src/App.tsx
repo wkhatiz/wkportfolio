@@ -17,7 +17,7 @@ function App() {
   return (
     <div
       className={
-        "mx-auto flex h-dvh w-full flex-col justify-between bg-stone-200 md:flex-row " +
+        "first-letter: mx-auto flex h-dvh w-full flex-col justify-between bg-stone-200 md:flex-row " +
         "xl:max-w-[1920px]"
       }
     >
