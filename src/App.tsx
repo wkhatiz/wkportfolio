@@ -13,10 +13,11 @@ function App() {
     <CareerPage />,
     <CodePage />,
   ];
+
   return (
     <div
       className={
-        "mx-auto flex h-dvh w-full flex-col justify-between md:flex-row " +
+        "mx-auto flex h-dvh w-full flex-col justify-between bg-stone-200 md:flex-row " +
         "xl:max-w-[1920px]"
       }
     >
