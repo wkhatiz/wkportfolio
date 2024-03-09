@@ -1,7 +1,7 @@
 function AboutPage() {
   return (
     <div className="flex-1 overflow-y-scroll p-7 md:overflow-y-auto lg:p-14 xl:p-24 xl:px-56">
-      <h1 className="mb-3 text-2xl font-bold text-sky-900 lg:mb-7 lg:text-5xl">
+      <h1 className="mb-3 text-3xl font-bold text-sky-900 lg:mb-7 lg:text-5xl">
         About Me
       </h1>
       <p className="text-md mb-5 text-sky-900 lg:text-xl">

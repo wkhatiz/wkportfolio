@@ -1,8 +1,15 @@
 function CareerPage() {
   return (
     <div className="flex-1 overflow-y-scroll p-7 md:overflow-y-auto lg:p-14 xl:p-24 xl:px-56">
+      <h1 className="mb-3 text-3xl font-bold text-sky-900 lg:mb-7 lg:text-5xl">
+        Career
+      </h1>
+      <p className="text-md mb-10 text-sky-900 lg:text-xl">
+        Here is a brief look at some of the experiences and achievement I've had
+        on my tech journey.
+      </p>
       <img src="WSU_logo.svg.png" className="mb-5 h-10 lg:h-12"></img>
-      <h2 className="text-2xl font-bold text-sky-900 lg:text-3xl">
+      <h2 className="text-xl font-bold text-sky-900 lg:text-2xl">
         Bachelor of Computer Science
       </h2>
       <p className="text-md mb-2 font-semibold text-stone-500 lg:mb-5">
@@ -22,7 +29,7 @@ function CareerPage() {
       </p>
 
       <img src="IBM_logo.svg.png" className="mb-5 h-8 lg:h-10"></img>
-      <h2 className="text-2xl font-bold text-sky-900 lg:text-3xl">
+      <h2 className="text-xl font-bold text-sky-900 lg:text-2xl">
         IBM Chicago
       </h2>
       <p className="text-md mb-2 font-semibold text-stone-500 lg:mb-5">
@@ -42,7 +49,7 @@ function CareerPage() {
         with the teams efforts.
       </p>
       <img src="Infosys_logo.svg.png" className="mb-3 h-9 lg:h-10"></img>
-      <h2 className="text-2xl font-bold text-sky-900 lg:text-3xl">
+      <h2 className="text-xl font-bold text-sky-900 lg:text-2xl">
         Infosys Limited Australia
       </h2>
       <p className="text-md mb-2 font-semibold text-stone-500 lg:mb-5">
