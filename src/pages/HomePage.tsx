@@ -1,4 +1,10 @@
-function HomePage() {
+type HomePageProps = {
+  contactVisible: boolean;
+  setContactVisible: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function HomePage(props: HomePageProps) {
+  const { contactVisible, setContactVisible } = props;
   const accStyles = "text-rose-500 hover:text-rose-700 cursor-pointer";
 
   return (
@@ -16,9 +22,10 @@ function HomePage() {
         <span className={accStyles}> destroy them</span>
       </h2>
       <button
+        onClick={() => setContactVisible(!contactVisible)}
         className={
           "w-44 rounded-md bg-rose-500 px-4 py-3 text-xl font-bold " +
-          "text-white drop-shadow-md hover:bg-rose-700 2xl:w-56 2xl:text-3xl"
+          "text-white drop-shadow-md transition-transform hover:-rotate-3 hover:bg-rose-700 2xl:w-56 2xl:text-3xl"
         }
       >
         Contact Me
