@@ -34,7 +34,7 @@ function ContactMe(props: ContactMeProps) {
           GitHub
         </a>
       </p>
-      <form>
+      <form action="https://formspree.io/f/xnqkorrg" method="POST">
         <div
           id="contact_field_cont"
           className="flex w-full flex-col justify-normal md:flex-row md:justify-between"
@@ -42,12 +42,14 @@ function ContactMe(props: ContactMeProps) {
           <input
             type="email"
             id="contact_email"
+            name="email"
             className="mb-4 block w-full rounded-md border-[1px] border-gray-400 p-2 md:mr-2 lg:text-lg"
             placeholder="Your Email"
           ></input>
           <input
             type="text"
             id="contact_name"
+            name="name"
             className="mb-4 block w-full rounded-md border-[1px] border-gray-400 p-2 md:ml-2 lg:text-lg"
             placeholder="Your Name"
           ></input>
@@ -55,11 +57,13 @@ function ContactMe(props: ContactMeProps) {
         <input
           type="subject"
           id="contact_subject"
+          name="subject"
           className="mb-4 block w-full rounded-md border-[1px] border-gray-400 p-2 lg:text-lg"
           placeholder="Subject"
         ></input>
         <textarea
           id="contact_message"
+          name="body"
           className="mb-4 block h-[100px] w-full overflow-y-scroll rounded-md border-[1px] border-gray-400 p-2 lg:text-lg "
           placeholder="Insert your message here"
         ></textarea>
@@ -82,6 +86,7 @@ function ContactMe(props: ContactMeProps) {
           </button>
           <input
             type="submit"
+            name="submit"
             id="contact_submit"
             className={
               "mb-3 ml-2 block flex-1 rounded-md bg-rose-500 font-bold " +
